@@ -122,8 +122,7 @@ class WNSBase(object):
 
     def serialize_tree(self, tree):
         from io import BytesIO
-
-        file = StringIO()
+        file = BytesIO()
         tree.write(file, encoding='utf-8')
         contents = file.getvalue()
         file.close()
